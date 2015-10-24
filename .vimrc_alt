@@ -1,0 +1,66 @@
+"colorscheme solarized
+set t_Co=256
+
+:imap jj <Esc>
+
+syntax enable
+
+"mark places in vim so you can avoid scrolling
+nnoremap ' `
+nnoremap ` '
+
+"set the amount of undo things
+set history=1000
+
+"Fixes curly braces so they do what I like
+inoremap {<CR> {<CR>}<Esc>O<TAB>
+
+"Make navigation between split windows much easier
+map <C-J> <C-W>j<C-W>
+map <C-K> <C-W>k<C-W>
+
+"Set the status line to show more information
+set laststatus=2
+set statusline=%f
+
+" Number of visual spaces per tab
+set tabstop=4
+
+" number of spaces in tab when editing
+set softtabstop=4
+
+"Show line numbers
+set number
+
+"show command in bottom bar
+set showcmd
+
+" load filetype-specific indent files
+filetype indent on
+
+"visual autocomplete for command menu
+set wildmenu
+
+"highlight matching for parens
+set showmatch
+
+"search as characters are entered
+set incsearch
+"highlight matches
+set hlsearch
+"be smart about case
+set smartcase
+
+"turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+"enable folding
+set foldenable
+set foldnestmax=10
+set foldlevelstart=10
+
+"highlight last inserted text
+nnoremap gV `[v`]
+
+set autoindent
+set copyindent
